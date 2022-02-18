@@ -7,6 +7,8 @@ var dal     = require('./dal.js');
 app.use(express.static('public'));
 app.use(cors());
 
+app.get('/', (req, res) => res.send("Hi from /"))
+
 //create user account
 app.get('/account/create/:name/:email/:password/:color', function (req, res) {
     // else create user
